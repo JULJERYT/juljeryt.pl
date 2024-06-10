@@ -1,35 +1,19 @@
-  var animatedTitle = [
-    "j",
-    "ju",
-    "jul",
-    "julj",
-    "julje",
-    "juljer",
-    "juljery",
-    "juljeryt",
-    "juljeryt.",
-    "juljeryt.p",
-    "juljeryt.pl",
-    "juljeryt.p",
-    "juljeryt.",
-    "juljeryt",
-    "juljery",
-    "juljer",
-    "julje",
-    "julj",
-    "jul",
-    "ju",
-    "j",
-    
-  ];
+var animatedTitle = "juljeryt.pl";
 
-  function animateTitle() {
-    var index = 0;
-    setInterval(function() {
-      document.title = animatedTitle[index];
-      index = (index + 1) % animatedTitle.length;
-    }, 300); 
-  }
+function animateTitle() {
 
+  var index = 0;
+  var reverse = false;
 
-  window.onload = animateTitle;
+  setInterval(function() {
+
+    index = (index + (reverse ? -1 : 1)) % (animatedTitle.length + 1);
+
+    if (index == 0 || index == animatedTitle.length) reverse = !reverse;
+
+    document.title = animatedTitle.slice(0, (index ? index : 1));
+
+  }, 300); 
+}
+
+window.onload = animateTitle;

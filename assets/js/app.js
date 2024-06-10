@@ -1,6 +1,6 @@
 class _app { 
     id = 0;
-    brandDescription = ['Certified sigma!', 'Helps when you have a problem with something!', 'Likes programming, editing, modding phones and a bit of hacking!'];
+    brandDescription = lang[currentLang].typedTitle;
     iconChanger = (urls, delay) => {
         if (!urls) return;
         delay = delay || 2000;
@@ -29,19 +29,19 @@ async function copyDiscord() {
 
     let originalText = copyText.innerText;
 
-    if(copyText.innerText == "copied to clipboard"){
+    if(copyText.innerText == lang[currentLang].intro.clipboardSuccess){
         return;
     }
 
     try {
         await navigator.clipboard.writeText(copyText.innerText);
-        copyText.innerText = "copied to clipboard";
+        copyText.innerText = lang[currentLang].intro.clipboardSuccess;
         
         setTimeout(() => {
             copyText.innerText = originalText;
         }, 5000);
     } catch (err) {
-        copyText.innerText = "Failed to copy"
+        copyText.innerText = lang[currentLang].intro.clipboardFailure;
 
         setTimeout(() => {
             copyText.innerText = originalText;

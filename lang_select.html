@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JULJERYT.PL</title>
+    <link rel="stylesheet" href="assets/css/lang_select.css">
+    <script src="assets/js/lib/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+    <video id="video-background" autoplay muted loop>
+        <source src="assets/img/background.mp4" type="video/mp4">
+        Your browser does not support the <code>video</code> element.
+    </video>
+    
+    <div id="header">
+        <p>Choose what language you want to view the website in:</p>
+    </div>
+
+    <div class="button-container">
+        <a class="button" id="pl">
+            <h2 style="font-weight: bold;">Polski</h2>
+        </a>
+
+        <a class="button" id="en">
+            <h2 style="font-weight: bold;">English</h2>
+        </a>
+
+    </div> 
+
+    <div id="mute-toggle" onclick="toggleMute()">
+        <span id="mute-icon">🔇</span>
+    </div>
+
+    <div id="loading-status">
+        Background load status: <span id="loading-text">not loaded yet</span>
+    </div>
+
+    <script>
+        var video = document.getElementById("video-background");
+        var muteIcon = document.getElementById("mute-icon");
+    
+        function toggleMute() {
+
+            if (video.muted) {
+                video.muted = false;
+                muteIcon.textContent = "🔈";
+            } else {
+                video.muted = true;
+                muteIcon.textContent = "🔇";
+            }
+        }
+
+        var loadingStatus = document.getElementById("loading-text");
+
+        video.onprogress = function() {
+
+            var percent = Math.floor((video.buffered.end(0) / video.duration) * 100);
+            loadingStatus = (percent > 30) ? "loaded" : "not loaded yet or its bugged";
+
+        };
+
+        $("a.button").click(function() {
+            localStorage.setItem("language", $(this).attr("id"));
+            window.location.href = "index.html"
+        });
+            
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0; 
+    padding: 0;
+    opacity: 0.8;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  #video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+ }
+
+  #header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+  }
+
+  #header p {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold; 
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .button {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  .channel:hover {
+    transform: scale(1.1);
+  }
+
+  .channel:active {
+    transform: scale(0.9);
+  }
+
+  #pl {
+    background: linear-gradient(45deg, #ff0f7b, #f89b29);
+  }
+
+  #en {
+    background: linear-gradient(45deg, #5c03bc, #2472fc);
+  }
+
+  #mute-toggle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #mute-icon {
+    font-size: 24px;
+  }
+
+  #loading-status {
+    background: linear-gradient(45deg, #ff0000, #ff00c8);
+    padding: 20px;
+    border-radius: 40px 10px;
+  }
+  
