@@ -90,7 +90,7 @@ body {
 
   #loading-status {
     background: linear-gradient(45deg, #ff0000, #ff00c8);
-    padding: 20px;
+    padding: 12px;
     border-radius: 40px 10px;
   }
   
