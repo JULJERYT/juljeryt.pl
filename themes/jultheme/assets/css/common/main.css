@@ -137,6 +137,7 @@ summary {
 
 .first-entry {
     max-width: 550px;
+    margin-bottom: 5px !important;
 }
 
 /* form */
@@ -197,4 +198,8 @@ summary {
 
 .form-button:hover {
     background: var(--secondary);
+}
+
+.post-entry {
+    width: 350px;
 }

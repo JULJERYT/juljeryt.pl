@@ -94,7 +94,7 @@
                         
                         let formData = new FormData(this);
                         let formMessage = document.getElementById("form-message");
-                        formMessage.textContent = ''; // Clear previous messages
+                        formMessage.textContent = ''; // clear previous messages
                         
                         fetch("/forms.php", {
                             method: "POST",
@@ -118,6 +118,7 @@
                     });
                 </script>
             </form>
+            <h2>my blog <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepo-writing.gif" alt=""></h2>
     </div>
 </article>
 {{- end -}}

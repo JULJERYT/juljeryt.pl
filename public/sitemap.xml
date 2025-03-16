@@ -8,10 +8,16 @@
     <loc>http://localhost:1313/blog/</loc>
     <lastmod>2025-03-15T19:35:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-03-15T11:13:49+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/posts/test1/</loc>
+    <lastmod>2025-03-15T11:13:49+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/test2/</loc>
+    <lastmod>2025-03-15T11:13:49+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/test3/</loc>
     <lastmod>2025-03-15T11:13:49+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
