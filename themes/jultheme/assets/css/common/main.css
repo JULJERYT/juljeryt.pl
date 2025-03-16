@@ -145,12 +145,12 @@ summary {
 .contact-form {
     padding: var(--content-gap);
     border-radius: var(--radius);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: var(--main-width);
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    margin-bottom: -25px;
 }
 
 .form-row {
@@ -185,7 +185,8 @@ summary {
     height: 120px;
 }
 
-.form-button {
+/* i use cool button instead of this */
+/* .form-button {
     padding: 10px;
     background: var(--primary);
     color: var(--theme);
@@ -198,8 +199,58 @@ summary {
 
 .form-button:hover {
     background: var(--secondary);
-}
+} */
 
 .post-entry {
-    width: 350px;
+    width: 420px;
+    /* haha so funny 420 */
+}
+
+/* it was sticky but i dont like it anymore */
+/* .header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--theme);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.cool-button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+.cool-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+.cool-button:hover {
+    color: #e8e8e8;
+}
+
+.cool-button:hover::before {
+    width: 100%;
 }

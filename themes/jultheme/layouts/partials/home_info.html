@@ -1,7 +1,7 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <img class="animatee__animated animatee__flip jul" width="500" height="500" src="https://juljeryt.pl/wp-content/uploads/2024/10/logo.webp" alt="jul" style="width:200px;height:auto;border-radius:50%;">
-    <header class="entry-header">
+    <div class="entry-header">
         <div class="cooltitle animatee__animated animatee__swing">
             <h1>juljeryt</h1>
             <video class="custom-img" width="50" height="50" autoplay loop muted playsinline style="margin-left: -18px;">
@@ -31,7 +31,7 @@
         var typed = new Typed("#typed", options);
     </script>
     <hr style="margin-top:clamp(40px, 8vw, 80px);;margin-bottom:clamp(40px, 8vw, 40px);">
-    </header>
+</div>
     <div class="entry-content" id="about">
             <h2>about <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-swing.gif" alt=""></h3>
             <p>my real name is&nbsp;<strong>julek</strong>. <img class="emote" width="24" height="24" style="width: 24px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-waving.gif" alt=""></p>
@@ -73,7 +73,7 @@
             <form class="contact-form" id="contact-form" action="/forms.php" method="POST">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="name">Name / Nickname</label>
+                        <label class="form-label" for="name">Name</label>
                         <input class="form-input" type="text" id="name" name="name" placeholder="example: jake2001" required>
                     </div>
                     <div class="form-group">
@@ -86,7 +86,7 @@
                     <textarea class="form-input bigger-input-like-my-dic" id="message" name="message" placeholder="example: hey jul can you accept my friend request on discord it would be very cool" required></textarea>
                 </div>
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAABA6ceO-Q7FIzb4x"></div>
-                <button class="form-button" type="submit">Send</button>
+                <button class="cool-button" type="submit">Send</button>
                 <div id="form-message" style="color: red; margin-top: 10px;"></div>
                 <script>
                     document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -118,7 +118,7 @@
                     });
                 </script>
             </form>
-            <h2>my blog <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepo-writing.gif" alt=""></h2>
+            <h2 id="blog">blog <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepo-writing.gif" alt=""></h2>
     </div>
 </article>
 {{- end -}}

@@ -110,6 +110,11 @@ body {
 {{- end }}
 {{- end -}}
 
+{{/*  main.js  */}}
+{{- $main_js := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
+{{- $main_js_concat := slice $main_js | resources.Concat "assets/js/main.js" | fingerprint}}
+<script defer src="{{ $main_js_concat.RelPermalink }}"></script>
+
 {{- /* Favicons */}}
 <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />

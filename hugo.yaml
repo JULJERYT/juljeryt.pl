@@ -17,9 +17,9 @@ params:
   title: juljeryt.pl
   description: "i like balls"
   keywords: [juljeryt, juljeryt.pl, juljerytpl, jul, julek]
-  author: jul
+  author: ""
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["/assets/media/banner.png"]
   DateFormat: "02.01.2006"
   defaultTheme: dark # dark, light
   disableThemeToggle: false
