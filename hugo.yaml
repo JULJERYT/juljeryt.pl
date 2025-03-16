@@ -121,7 +121,7 @@ menu:
   main:
     - identifier: home
       name: home
-      url: /#
+      url: /
       weight: 10
     - identifier: blog
       name: blog
