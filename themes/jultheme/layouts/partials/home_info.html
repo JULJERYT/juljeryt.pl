@@ -1,0 +1,123 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <img class="animatee__animated animatee__flip jul" width="500" height="500" src="https://juljeryt.pl/wp-content/uploads/2024/10/logo.webp" alt="jul" style="width:200px;height:auto;border-radius:50%;">
+    <header class="entry-header">
+        <div class="cooltitle animatee__animated animatee__swing">
+            <h1>juljeryt</h1>
+            <video class="custom-img" width="50" height="50" autoplay loop muted playsinline style="margin-left: -18px;">
+                <source src="/assets/media/verify.webm" type="video/webm" />
+              </video>
+        </div>
+        <link rel="stylesheet" href="/assets/frameworks/animatee.min.css"/>
+        <div class="typing">
+        <script src="/assets/frameworks/typedd.min.js"></script>
+    <span id="typed"></span>
+    <div id="typed-strings" style="display: none;">
+        <p></p>
+        <p>passwords are like underwear</p>
+        <p>dont let people see it</p>
+        <p>change it very often</p>
+        <p>and you shouldnt share it with strangers</p>
+    </div>
+</div>
+    <script>
+        var options = {
+            stringsElement: '#typed-strings',
+            typeSpeed: 50,
+            backSpeed: 10,
+            backDelay: 100,
+            loop: true
+        };
+        var typed = new Typed("#typed", options);
+    </script>
+    <hr style="margin-top:clamp(40px, 8vw, 80px);;margin-bottom:clamp(40px, 8vw, 40px);">
+    </header>
+    <div class="entry-content" id="about">
+            <h2>about <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-swing.gif" alt=""></h3>
+            <p>my real name is&nbsp;<strong>julek</strong>. <img class="emote" width="24" height="24" style="width: 24px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-waving.gif" alt=""></p>
+            <p>im interested in programming, editing videos, modding phones, experimenting with the raspberry pi, exploring cities and spending time with friends. <img class="emote" width="24" height="24" style="width: 24px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-hacking.gif" alt=""></p>
+            <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-gaming.gif" alt=""></p>
+            <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-poland.gif" alt=""></p>
+    </div>
+    <div class="entry-content" id="contact">
+        <h2>contact <img class="emote" width="32" height="32" style="width: 32px;" src="https://juljeryt.pl/wp-content/uploads/2024/10/pepe-ping.gif" alt=""></h2>
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+            <details class="allow-rightclick"><summary>donate me</summary>
+                <script src="/assets/frameworks/clipboardd.min.js"></script>
+                <script>
+                    var clipboard = new ClipboardJS('.copy');
+                </script>
+                <p>
+                    <span>you can click on the address to copy it</span>
+                    <br>
+                    <strong>btc address:</strong>
+                    <code id="btc" data-clipboard-target="#btc" class="copy">bc1qjf5ae848arnm2ylu94wshjqnz3377cuq2ctvxe</code>
+                    <br>
+                    <strong>eth address:</strong>
+                    <br>
+                    <code id="eth" data-clipboard-target="#eth" class="copy">0xdD8F31BAe74448CA4732b9BBA2E2414250c50df5</code>
+                    <br>
+                    <strong>doge address:</strong>
+                    <br>
+                    <code id="doge" data-clipboard-target="#doge" class="copy">DT9HuppZkhmfgNHcDW8RJz9UygUJnWUNkY</code>
+                    <br>
+                    <strong>ltc address:</strong>
+                    <br>
+                    <code id="ltc" data-clipboard-target="#ltc" class="copy">LN4xr3Ls8412QAhdwkWhpESHiSeWkui5Nc</code>
+                    <br>
+                    <strong>xrp address:</strong>
+                    <br>
+                    <code id="xrp" data-clipboard-target="#xrp" class="copy">rPSZp8eM4s8vriPHJWyjjknqQEX1V1mZa8</code>
+                </p>
+            </details>
+            <form class="contact-form" id="contact-form" action="/forms.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name / Nickname</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="example: jake2001" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="example: jake@juljeryt.pl" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-input bigger-input-like-my-dic" id="message" name="message" placeholder="example: hey jul can you accept my friend request on discord it would be very cool" required></textarea>
+                </div>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABA6ceO-Q7FIzb4x"></div>
+                <button class="form-button" type="submit">Send</button>
+                <div id="form-message" style="color: red; margin-top: 10px;"></div>
+                <script>
+                    document.getElementById("contact-form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        
+                        let formData = new FormData(this);
+                        let formMessage = document.getElementById("form-message");
+                        formMessage.textContent = ''; // Clear previous messages
+                        
+                        fetch("/forms.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === 'success') {
+                                formMessage.style.color = 'green';
+                                formMessage.textContent = data.message;
+                            } else {
+                                formMessage.style.color = 'red';
+                                formMessage.textContent = data.message;
+                            }
+                        })
+                        .catch(error => {
+                            formMessage.style.color = 'red';
+                            formMessage.textContent = 'An error occurred. Please try again later.';
+                            console.error("Error:", error);
+                        });
+                    });
+                </script>
+            </form>
+    </div>
+</article>
+{{- end -}}

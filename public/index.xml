@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>juljeryt.pl</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on juljeryt.pl</description>
+    <image>
+      <title>juljeryt.pl</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Mar 2025 19:35:46 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>my blog</title>
+      <link>http://localhost:1313/blog/</link>
+      <pubDate>Sat, 15 Mar 2025 19:35:46 +0100</pubDate>
+      <guid>http://localhost:1313/blog/</guid>
+      <description>&lt;p&gt;hi there! you are currently on my very own blog. i write here various things that interest me. enjoy!
+
+&lt;ul&gt;
+  
+  &lt;li&gt;
+    &lt;article class=&#34;post-entry&#34;&gt;
+      &lt;header class=&#34;entry-header&#34;&gt;
+        &lt;h2 class=&#34;entry-hint-parent&#34;&gt;My First Post
+          
+          &lt;span class=&#34;entry-hint&#34; title=&#34;Draft&#34;&gt;
+            &lt;svg height=&#34;20&#34; viewBox=&#34;0 -960 960 960&#34; fill=&#34;currentcolor&#34;&gt;
+              &lt;path d=&#34;M160-410v-60h300v60H160zm0-165v-60h470v60H160zm0-165v-60h470v60H160zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22-4.5 22.5T862.09-380L643-160H520zm300-263-37-37 37 37zM580-220h38l121-122-18-19-19-18-122 121v38zm141-141-19-18 37 37-18-19z&#34;&gt;&lt;/path&gt;
+            &lt;/svg&gt;
+          &lt;/span&gt;
+          
+        &lt;/h2&gt;
+      &lt;/header&gt;
+      &lt;div class=&#34;entry-content&#34;&gt;
+        &lt;p&gt;&lt;h1 id=&#34;welcome-guys-im-julek&#34;&gt;welcome guys im julek&lt;/h1&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;footer class=&#34;entry-footer&#34;&gt;
+        &lt;span title=&#34;2025-03-15 11:13:49 &amp;#43;0100 CET&#34;&gt;15.03.2025&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;5 words
+      &lt;/footer&gt;
+      &lt;a class=&#34;entry-link&#34; aria-label=&#34;post link to My First Post&#34; href=&#34;http://localhost:1313/posts/my-first-post/&#34;&gt;&lt;/a&gt;
+    &lt;/article&gt;
+  &lt;/li&gt;
+  
+&lt;/ul&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sat, 15 Mar 2025 11:13:49 +0100</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h1 id=&#34;welcome-guys-im-julek&#34;&gt;welcome guys im julek&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,200 @@
+.main {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page-header h1 {
+    font-size: 40px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination a {
+    color: var(--theme);
+    font-size: 13px;
+    line-height: 36px;
+    background: var(--primary);
+    border-radius: calc(36px / 2);
+    padding: 0 16px;
+}
+
+.pagination .next {
+    margin-inline-start: auto;
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
+}
+
+code {
+    direction: ltr;
+}
+
+div.highlight,
+pre {
+    position: relative;
+}
+
+.copy-code {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(78, 78, 78, 0.8);
+    border-radius: var(--radius);
+    padding: 0 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
+    display: block;
+}
+
+/* start of my mods */
+.home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.home-info img {
+    margin: 0 auto;
+}
+
+.home-info .entry-header,
+.home-info .entry-content,
+.home-info .entry-footer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.cooltitle {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.jul {
+    z-index: 2;
+    /* idk it doesnt work anyway */
+}
+
+.typing {
+    margin-top: 32px;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.emote {
+    display: inline;
+    vertical-align: middle;
+    margin: 0 4px;
+}
+
+.entry-content {
+    margin-top: -40px;
+}
+
+summary {
+    cursor: pointer;
+}
+
+.copy {
+    cursor: pointer;
+}
+
+.first-entry {
+    max-width: 550px;
+}
+
+/* form */
+
+.contact-form {
+    padding: var(--content-gap);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: var(--main-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--gap);
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    color: var(--content);
+    font-size: 16px;
+}
+
+.bigger-input-like-my-dic {
+    resize: vertical;
+    height: 120px;
+}
+
+.form-button {
+    padding: 10px;
+    background: var(--primary);
+    color: var(--theme);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.form-button:hover {
+    background: var(--secondary);
+}
