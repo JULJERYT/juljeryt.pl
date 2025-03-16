@@ -9,7 +9,7 @@
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.139.4</generator>
     <language>en</language>
     <lastBuildDate>Sat, 15 Mar 2025 19:35:46 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -39,7 +39,7 @@
         &lt;p&gt;&lt;h1 id=&#34;welcome-guys-im-julek&#34;&gt;welcome guys im julek&lt;/h1&gt;&lt;/p&gt;
       &lt;/div&gt;
       &lt;footer class=&#34;entry-footer&#34;&gt;
-        &lt;span title=&#34;2025-03-15 11:13:49 &amp;#43;0100 CET&#34;&gt;15.03.2025&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;5 words
+        &lt;span title=&#34;2025-03-15 11:13:49 &amp;#43;0100 &amp;#43;0100&#34;&gt;15.03.2025&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;5 words
       &lt;/footer&gt;
       &lt;a class=&#34;entry-link&#34; aria-label=&#34;post link to My First Post&#34; href=&#34;http://localhost:1313/posts/my-first-post/&#34;&gt;&lt;/a&gt;
     &lt;/article&gt;

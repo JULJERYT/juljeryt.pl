@@ -1,24 +1,14 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    <hr class="wp-block-separator aligncenter has-alpha-channel-opacity is-style-default" style="width: 100px;margin-top:var(--wp--preset--spacing--superbspacing-xsmall);margin-bottom:var(--wp--preset--spacing--superbspacing-xsmall)">
+    <hr class="wp-block-separator aligncenter has-alpha-channel-opacity is-style-default" style="width: 100px;margin-top:clamp(10px, 2vw, 20px);margin-bottom:clamp(10px, 2vw, 20px);">
     {{- if not site.Params.footer.hideCopyright }}
         {{- if site.Copyright }}
         <span>{{ site.Copyright | markdownify }}</span>
         {{- else }}
         <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
         {{- end }}
-        {{- print " · "}}
     {{- end }}
 
-    {{- with site.Params.footer.text }}
-        {{ . | markdownify }}
-        {{- print " · "}}
-    {{- end }}
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
-    </span>
 </footer>
 {{- end }}
 
