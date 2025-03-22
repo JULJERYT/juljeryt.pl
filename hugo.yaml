@@ -51,8 +51,8 @@ params:
 
   label:
     text: "juljeryt.pl"
-    icon: /favicons/apple-touch-icon.png
-    iconHeight: 40
+    icon: /assets/media/logo.webp
+    iconHeight: 45
 
   # profile-mode
   profileMode:
@@ -137,6 +137,9 @@ menu:
 
 pygmentsUseClasses: true
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     noClasses: false
     # anchorLineNos: true
