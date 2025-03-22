@@ -202,7 +202,7 @@ summary {
 } */
 
 .post-entry {
-    width: 420px;
+    max-width: 420px;
     /* haha so funny 420 */
 }
 
@@ -244,7 +244,7 @@ summary {
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms
+    transition: all 250ms;
 }
 
 .cool-button:hover {
@@ -253,6 +253,15 @@ summary {
 
 .cool-button:hover::before {
     width: 100%;
+}
+
+.cool-button:active {
+    transform: scale(0.88);
+}
+
+.social-icon:active {
+    transform: scale(0.92);
+    transition: all 250ms;
 }
 
 .fadein {
