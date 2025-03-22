@@ -113,7 +113,13 @@ body {
 {{/*  main.js  */}}
 {{- $main_js := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
 {{- $main_js_concat := slice $main_js | resources.Concat "assets/js/main.js" | fingerprint}}
-<script defer src="{{ $main_js_concat.RelPermalink }}"></script>
+<script src="{{ $main_js_concat.RelPermalink }}"></script>
+
+{{/*  frameworks  */}}
+<link rel="stylesheet" href="/assets/frameworks/animatee.min.css"/>
+<script src="/assets/frameworks/clipboardd.min.js"></script>
+<script src="/assets/frameworks/typedd.min.js"></script>
+
 
 {{- /* Favicons */}}
 <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
