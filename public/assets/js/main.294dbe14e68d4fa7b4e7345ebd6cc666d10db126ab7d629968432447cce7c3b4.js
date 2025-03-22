@@ -1,0 +1,1 @@
+(()=>{console.log("Hello world!"),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img").forEach(e=>{e.setAttribute("loading","lazy")})})})()

@@ -2,16 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>my blog on juljeryt.pl</title>
-    <link>https://hugo.juljeryt.pl/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in my blog on juljeryt.pl</description>
     <image>
       <title>juljeryt.pl</title>
-      <url>https://hugo.juljeryt.pl/assets/media/banner.png</url>
-      <link>https://hugo.juljeryt.pl/assets/media/banner.png</link>
+      <url>http://localhost:1313/assets/media/banner.png</url>
+      <link>http://localhost:1313/assets/media/banner.png</link>
     </image>
     <generator>Hugo -- 0.139.4</generator>
     <language>en</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://hugo.juljeryt.pl/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Mar 2025 11:13:49 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test 1</title>
+      <link>http://localhost:1313/blog/test1/</link>
+      <pubDate>Sat, 15 Mar 2025 11:13:49 +0100</pubDate>
+      <guid>http://localhost:1313/blog/test1/</guid>
+      <description>&lt;h1 id=&#34;lorem-ipsum-dolor-sit-amet&#34;&gt;Lorem ipsum dolor sit amet,&lt;/h1&gt;
+&lt;p&gt;consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test 2</title>
+      <link>http://localhost:1313/blog/test2/</link>
+      <pubDate>Sat, 15 Mar 2025 11:13:49 +0100</pubDate>
+      <guid>http://localhost:1313/blog/test2/</guid>
+      <description>&lt;h1 id=&#34;lorem-ipsum-odor-amet&#34;&gt;Lorem ipsum odor amet,&lt;/h1&gt;
+&lt;p&gt;consectetuer adipiscing elit. Cras aliquet vestibulum ac id turpis lacus. Primis at consectetur urna ipsum eros dolor ac potenti vivamus. Integer magnis adipiscing netus dignissim erat fringilla. Felis accumsan tristique morbi placerat nisl duis vehicula nibh ornare. Maximus conubia habitant pharetra ipsum ipsum. Nibh ipsum posuere id suscipit volutpat luctus non. Varius integer nibh platea magnis semper ultrices donec. Diam nostra dis neque dignissim nibh dictum augue taciti.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test 3</title>
+      <link>http://localhost:1313/blog/test3/</link>
+      <pubDate>Sat, 15 Mar 2025 11:13:49 +0100</pubDate>
+      <guid>http://localhost:1313/blog/test3/</guid>
+      <description>&lt;h1 id=&#34;lorem-ipsum-odor-amet&#34;&gt;Lorem ipsum odor amet,&lt;/h1&gt;
+&lt;p&gt;consectetuer adipiscing elit. Sagittis mattis aliquet pharetra lacinia est, iaculis fames tellus! Tristique egestas mattis parturient malesuada turpis. Nunc aenean diam bibendum tempus hac duis tellus. Efficitur platea etiam consequat vel vivamus dictum, cursus sit est. Ex fermentum purus cubilia malesuada diam facilisis. Tellus sagittis ornare facilisis tempor phasellus nec ipsum quis. Pulvinar rhoncus tempor vivamus ad convallis; in class.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
