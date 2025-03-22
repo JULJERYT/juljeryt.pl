@@ -254,3 +254,16 @@ summary {
 .cool-button:hover::before {
     width: 100%;
 }
+
+.fadein {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
