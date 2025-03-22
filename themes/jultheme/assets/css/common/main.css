@@ -47,6 +47,7 @@ html {
 
 code {
     direction: ltr;
+    max-width: var(--main-width);
 }
 
 div.highlight,
@@ -275,4 +276,11 @@ summary {
     to {
         opacity: 1;
     }
+}
+
+figcaption {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -12px;
+    color: #666; /* devil number :o */
 }
