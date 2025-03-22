@@ -4,3 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         img.setAttribute("loading", "lazy");
     });
 });
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/assets/frameworks/sw.js').then(() => {
+        console.log("service worker registered");
+    });
+}
