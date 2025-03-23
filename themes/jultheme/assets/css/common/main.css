@@ -249,6 +249,7 @@ summary {
 }
 
 .cool-button:hover {
+    transform: scale(0.95);
     color: #e8e8e8;
 }
 
@@ -260,12 +261,12 @@ summary {
     transform: scale(0.88);
 }
 
-.social-icon:active {
-    transform: scale(0.92);
-    transition: all 250ms;
+.social-icon:hover {
+    transform: scale(1.10);
+    transition: transform 0.3s ease;
 }
 
-.fadein {
+/* .fadein {
     animation: fadeIn 1s;
 }
 
@@ -276,11 +277,19 @@ summary {
     to {
         opacity: 1;
     }
-}
+} */
 
 figcaption {
     font-size: 14px;
     text-align: center;
     margin-top: -12px;
     color: #666; /* devil number :o */
+}
+
+.post-entry:hover {
+    transform: scale(1.03);
+}
+
+li:hover {
+    transform: scale(0.965);
 }
