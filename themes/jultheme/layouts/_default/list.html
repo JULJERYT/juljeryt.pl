@@ -66,6 +66,10 @@
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  <div style="display: flex; flex-direction: row;">
+    {{- $coverImage := .Params.cover.image | default "/assets/media/default-cover.gif" }}
+    <img src="{{ $coverImage }}" style="width: 48px; height: 48px; margin-right: 15px;">
+    <div style="display: flex; flex-direction: column;">
   <div class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}
