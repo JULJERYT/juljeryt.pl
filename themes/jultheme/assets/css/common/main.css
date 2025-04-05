@@ -389,3 +389,9 @@ figcaption {
   ul {
 	overflow: hidden;
   }
+
+  /* wrap code elements, because they were breaking on mobile devices */
+  pre, code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
