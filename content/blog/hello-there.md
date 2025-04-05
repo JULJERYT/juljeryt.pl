@@ -24,16 +24,17 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: false
 cover:
-    image: "/assets/media/hello-there/cover.gif" # image path/url
-    alt: "waving hand" # alt text
-    caption: "waving hand" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: false # only hide on current single page
+  image: "/assets/media/hello-there/cover.gif" # image path/url
+  alt: "waving hand" # alt text
+  caption: "waving hand" # display caption under cover
+  relative: false # when using page bundles set this to true
+  hidden: false # only hide on current single page
 # editPost:
 #     URL: "https://github.com/<path_to_repo>/content"
 #     Text: "Suggest Changes" # edit text
 #     appendFilePath: true # to append file path to Edit link
 ---
+
 wow, setting up this site was an amazing experience. i love that feeling when from classic, boring site you create your own, customized one.
 
 ## style of this site
@@ -50,6 +51,7 @@ someone may also notice that this site is only in english (im from poland and no
 </video>
 
 ## custom cursor
+
 update 08.03.2025
 
 i decided to disable custom cursor due to compatibility issues
@@ -206,6 +208,7 @@ the other day on the youtube homepage i noticed this video
 <a href="https://youtu.be/wG_5453Vq98" target="_blank">
 ![Award Winning Elastic Cursor Follow Animation by Gusev Digital](/assets/media/hello-there/Screenshot_20250109_214019.png)
 </a>
+
 <figcaption>you can click on this image, it will redirect you to this video</figcaption>
 this project fascinated me so much that i decided that i want that cursor at my site
 
@@ -228,6 +231,7 @@ its 2025 already and i finally fixed that problem with disappearance of custom c
 (i just added z-index: 9999; to css)
 
 ## eastereggs
+
 1. trolling wappalyzer users
 
 update 08.03.2025
@@ -272,20 +276,24 @@ i disabled this easter egg cuz it displays a lot of errors in console
 
 [wappalyzer](https://www.wappalyzer.com/) is a tool that detects the technologies used on websites, like cms, frameworks, and analytics tools. its available as a browser extension. its very useful, i use it myself. i was curious how it all worked and saw that in the files of this extension there was a folder “technologies”
 
-![llist of all known technologies by wappalyzer, sorted alphabetically!](/assets/media/hello-there/Screenshot_20250109_211057-1.png)
+![list of all known technologies by wappalyzer, sorted alphabetically!](/assets/media/hello-there/Screenshot_20250109_211057-1.png)
+
 <figcaption>list of all known technologies by wappalyzer, sorted alphabetically!</figcaption>
 
 ![way(s) how wappalyzer detects technologies (here as an example wordpress)](/assets/media/hello-there/Screenshot_20250109_211456.png)
+
 <figcaption>way(s) how wappalyzer detects technologies (here as an example wordpress)</figcaption>
 
 and then i thought
->*"what if i would add code elements by which the wappalyzer (erroneously) thinks the page is based on some technology"* ~julek 2024
+
+> _"what if i would add code elements by which the wappalyzer (erroneously) thinks the page is based on some technology"_ ~julek 2024
 
 and i have added it!
 
 even now you can install this extension and then youll see that it displays a lot of different technologies (which i dont actually use)
 
 (a bit too many of these cms and js frameworks, isnt it?)
+
 <div style="display: flex; flex-wrap: nowrap; justify-content: space-between">
 <img height="350px" width="auto" alt="fake technologies 1" src="/assets/media/hello-there/Screenshot_20250109_212849.png">
 <img height="350px" width="auto" alt="fake technologies 2" src="/assets/media/hello-there/Screenshot_20250109_212859.png">
