@@ -110,10 +110,12 @@ body {
 {{- end }}
 {{- end -}}
 
-{{/*  main.js  */}}
+{{/*  main.js 
 {{- $main_js := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
 {{- $main_js_concat := slice $main_js | resources.Concat "assets/js/main.js" | fingerprint}}
-<script src="{{ $main_js_concat.RelPermalink }}"></script>
+*/}}
+<script src="/assets/js/main.js"></script>
+
 
 {{/*  frameworks  */}}
 <link rel="stylesheet" href="/assets/frameworks/animatee.min.css"/>
