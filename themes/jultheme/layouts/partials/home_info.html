@@ -46,7 +46,27 @@
 </div>
     <div class="entry-content" id="about">
             <h2>about <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepe-swing.gif" alt="" loading="lazy"></h3>
-            <p>my real name is&nbsp;<strong>julek</strong>. <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-waving.gif" alt="" loading="lazy"></p>
+            <p>real name: &nbsp;<strong>julek</strong> <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-waving.gif" alt="" loading="lazy"></p>
+            <p id="time-info">
+                <strong>my time:</strong> <span id="poland-time"></span> (<span id="time-difference"></span>)
+            </p>
+            <script>
+                function updateTimeInfo() {
+                    const polandOffset = 2; // poland is utc+2
+                    const now = new Date();
+                    const visitorOffset = now.getTimezoneOffset() / -60; // convert minutes to hours
+                    const polandTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Warsaw" }));
+                    
+                    const hoursDifference = polandOffset - visitorOffset;
+                    const formattedPolandTime = polandTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+                    document.getElementById("poland-time").textContent = formattedPolandTime;
+                    document.getElementById("time-difference").textContent = `${Math.abs(hoursDifference)} hour${Math.abs(hoursDifference) !== 1 ? 's' : ''} ${hoursDifference > 0 ? 'ahead' : 'behind'}`;
+                }
+        
+                updateTimeInfo();
+                setInterval(updateTimeInfo, 60000); // update every minute
+            </script>
             <p>im interested in programming, editing videos, modding phones, experimenting with the raspberry pi, exploring cities and spending time with friends. <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-hacking.gif" alt="" loading="lazy"></p>
             <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-gaming.gif" alt="" loading="lazy"></p>
             <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-poland.gif" alt="" loading="lazy"></p>
