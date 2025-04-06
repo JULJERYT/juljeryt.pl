@@ -93,6 +93,29 @@
             <p>im interested in programming, editing videos, modding phones, experimenting with the raspberry pi, exploring cities and spending time with friends. <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-hacking.gif" alt="" loading="lazy"></p>
             <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-gaming.gif" alt="" loading="lazy"></p>
             <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-poland.gif" alt="" loading="lazy"></p>
+            <p id="weather-info">
+                <strong>current weather:</strong> <span id="temperature"></span>
+            </p>
+            <script>
+                async function fetchWeather() {
+                    try {
+                        const response = await fetch('https://api.juljeryt.pl/weather.php');
+                        const data = await response.json();
+            
+                        if (data.temperature_celsius && data.temperature_fahrenheit) {
+                            document.getElementById('temperature').textContent = 
+                                `${data.temperature_celsius}°C (${data.temperature_fahrenheit}°F)`;
+                        } else {
+                            document.getElementById('temperature').textContent = 'unable to fetch weather data';
+                        }
+                    } catch (error) {
+                        console.error('Error fetching weather data:', error);
+                        document.getElementById('temperature').textContent = 'error fetching weather data';
+                    }
+                }
+            
+                fetchWeather();
+            </script>
     </div>
     <div class="entry-content" id="contact">
         <h2>contact <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepe-ping.gif" alt="" loading="lazy"></h2>
