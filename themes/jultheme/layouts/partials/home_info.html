@@ -46,10 +46,9 @@
 </div>
     <div class="entry-content" id="about">
             <h2>about <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepe-swing.gif" alt="" loading="lazy"></h3>
-            <p>real name: &nbsp;<strong>julek</strong> <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-waving.gif" alt="" loading="lazy"></p>
-            <p id="time-info">
-                <strong>my time:</strong> <span id="poland-time"></span> (<span id="time-difference"></span>)
-            </p>
+            <p>real name: <strong>julek</strong> <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-waving.gif" alt="" loading="lazy"></p>
+            <p>pronouns: <strong>he/him</strong>
+            <p id="time-info">my time: <strong><span id="poland-time"></span></strong> (<span id="time-difference"></span>)</p>
             <script>
                 function updateTimeInfo() {
                     const polandOffset = 2; // poland is utc+2
@@ -67,7 +66,7 @@
                 updateTimeInfo();
                 setInterval(updateTimeInfo, 60000); // update every minute
             </script>
-            <p id="visitor-count"></p>
+            <strong><p id="visitor-count"></p></strong>
             <script>
                 async function updateVisitCount() {
                     try {
@@ -94,7 +93,7 @@
             <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-gaming.gif" alt="" loading="lazy"></p>
             <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-poland.gif" alt="" loading="lazy"></p>
             <p id="weather-info">
-                <strong>current weather:</strong> <span id="temperature"></span>
+                current weather: <strong><span id="temperature"></span></strong>
             </p>
             <script>
                 async function fetchWeather() {
