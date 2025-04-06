@@ -67,6 +67,29 @@
                 updateTimeInfo();
                 setInterval(updateTimeInfo, 60000); // update every minute
             </script>
+            <p id="visitor-count"></p>
+            <script>
+                async function updateVisitCount() {
+                    try {
+                        // send api request
+                        const response = await fetch('https://api.juljeryt.pl/counter.php');
+                        const data = await response.json();
+        
+                        // show the visitor count
+                        if (data.error) {
+                            console.error('error:', data.error);
+                            document.getElementById('visitor-count').textContent = 'oops something went wrong';
+                            return;
+                        }
+                        document.getElementById('visitor-count').textContent = 'visitors count: ' + data.visitor_count;
+                    } catch (error) {
+                        console.error('error fetching visitor count:', error);
+                    }
+                }
+        
+                // update visit count on page load
+                window.onload = updateVisitCount;
+            </script>
             <p>im interested in programming, editing videos, modding phones, experimenting with the raspberry pi, exploring cities and spending time with friends. <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-hacking.gif" alt="" loading="lazy"></p>
             <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-gaming.gif" alt="" loading="lazy"></p>
             <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-poland.gif" alt="" loading="lazy"></p>
