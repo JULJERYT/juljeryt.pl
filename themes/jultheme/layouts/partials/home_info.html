@@ -173,7 +173,7 @@
                         let formMessage = document.getElementById("form-message");
                         formMessage.textContent = ''; // clear previous messages
                         
-                        fetch("/forms.php", {
+                        fetch("https://api.juljeryt.pl/forms.php", {
                             method: "POST",
                             body: formData
                         })
