@@ -1,3 +1,0 @@
-/*
-  written by juljeryt because who else
-*/
