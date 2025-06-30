@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+    min-height: 100vh;
+    max-width: 56rem;
+    color: #f3f4f6;
+    font-family: monospace;
+    padding: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+}
+
+.card {
+    background: rgba(15, 23, 42, 0.6);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(148, 163, 184, 0.2);
+}
