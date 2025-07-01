@@ -1,6 +1,9 @@
-body {
+html {
     background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
     min-height: 100vh;
+}
+
+body {
     max-width: 64rem;
     color: #f3f4f6;
     font-family: monospace;
