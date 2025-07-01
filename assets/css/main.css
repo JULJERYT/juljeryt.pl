@@ -30,14 +30,12 @@ header {
     .julswebsite {
       font-size: 2.25rem;
     }
-}
-
-header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+    .first-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .second-row {
+      grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .header-1 {
