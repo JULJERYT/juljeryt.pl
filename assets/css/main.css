@@ -68,10 +68,6 @@ section {
   border-radius: 0.75rem;
 }
 
-.card2-2 {
-  width: 100%;
-}
-
 @keyframes fadein {
   from { opacity: 0; }
   to { opacity: 1; }
