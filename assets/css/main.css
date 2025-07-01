@@ -30,11 +30,8 @@ header {
     .julswebsite {
       font-size: 2.25rem;
     }
-    .first-row {
+    section {
       grid-template-columns: repeat(3, 1fr);
-    }
-    .second-row {
-      grid-template-columns: repeat(4, 1fr);
     }
 }
 
