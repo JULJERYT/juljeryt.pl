@@ -47,3 +47,11 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+
+footer {
+  text-align: center;
+  color: rgb(147 197 253 / 0.8);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
