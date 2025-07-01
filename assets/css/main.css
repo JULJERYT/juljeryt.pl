@@ -119,6 +119,34 @@ section {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
+.favquote {
+  display: flex;
+  align-items: flex-start;
+}
+
+.quote-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.quote-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
+
+.quote-line {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.quote-list {
+  list-style-type: none;
+  margin-left: -2rem;
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to { opacity: 1; }
