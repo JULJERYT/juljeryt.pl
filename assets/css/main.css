@@ -57,9 +57,15 @@ section {
 }
 
 .card {
-    background: rgba(15, 23, 42, 0.6);
+  background: rgba(15, 23, 42, 0.6);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.card1-1, .card1-2, .card1-3 {
+  grid-column: span 1;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
 }
 
 @keyframes fadein {
