@@ -33,6 +33,8 @@ header {
   background: rgba(15, 23, 42, 0.6);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.35rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .julswebsite {
@@ -42,6 +44,7 @@ header {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
 }
 
 .version {
@@ -60,12 +63,59 @@ section {
 }
 
 .card {
+  font-size: 1rem;
   background: rgba(15, 23, 42, 0.6);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(148, 163, 184, 0.2);
   grid-column: span 1;
   padding: 1.5rem;
   border-radius: 0.75rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card1-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pfp {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  margin-bottom: -1.2rem;
+}
+
+.jul {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #22d3ee;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  margin-bottom: 1rem;
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.verify {
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-left: 0.5rem;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.5));
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.status {
+  width: 50%;
+  height: auto;
+  margin-top: 1rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 @keyframes fadein {
@@ -101,6 +151,29 @@ footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   line-height: 1.2rem;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+.title1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bigemoji {
+  width: 2rem;
+  height: 2rem;
+  display: inline;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
+.smallemoji {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
