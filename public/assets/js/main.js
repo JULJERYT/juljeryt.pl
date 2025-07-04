@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, i * 100);
     });
   }, {
-    threshold: 0.1
+    threshold: 0.2
   });
 
   fadeElements.forEach(el => observer.observe(el));

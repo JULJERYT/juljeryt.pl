@@ -1,6 +1,12 @@
+<style>
+    body {
+        opacity: 0;
+    }
+</style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#2E2E33"/>
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
 <meta name="robots" content="index, follow">
 {{- else }}
@@ -55,7 +61,6 @@ body {
     line-height: 1.6;
     word-break: break-word;
     background: var(--theme);
-    opacity: 0;
 }
 </style>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

@@ -18,8 +18,8 @@
         <div class="cooltitle animatee__animated animatee__swing">
             <h1>juljeryt</h1>
             <video class="custom-img" width="50" height="50" autoplay loop muted playsinline style="margin-left: -18px;">
-                <source src="/assets/media/verify.webm" type="video/webm" />
-              </video>
+                <source src="/assets/media/verify.webm" type="video/webm" alt="" />
+            </video>
         </div>
         <div class="typing animatee__animated animatee__jackInTheBox">
         
@@ -42,13 +42,13 @@
         };
         var typed = new Typed("#typed", options);
     </script>
-    <hr style="margin-top:clamp(40px, 8vw, 80px);;margin-bottom:clamp(40px, 8vw, 40px);">
+    <hr style="margin-top:clamp(40px, 8vw, 80px);margin-bottom:clamp(40px, 8vw, 40px);">
 </div>
     <div class="entry-content" id="about">
-            <h2>about <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepe-swing.gif" alt="" loading="lazy"></h3>
-            <p>real name: <strong>julek</strong> <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-waving.gif" alt="" loading="lazy"></p>
-            <p>pronouns: <strong>he/him</strong>
-            <p id="time-info">my time: <strong><span id="poland-time"></span></strong> (<span id="time-difference"></span>)</p>
+            <h2>about <img class="emote" width="32" height="32" src="/assets/media/emojis/pepe-swing.gif" alt="" loading="lazy"></h2>
+            <p>my real name is <strong>julek</strong> (<strong>jul</strong> is shorten) <img class="emote" width="24" height="24" src="/assets/media/emojis/pepe-waving.gif" alt="" loading="lazy"></p>
+            <p>pronouces: <strong>he/him</strong> <img class="emote" width="24" height="24" src="/assets/media/emojis/pepe-dumb.png" alt="" loading="lazy"></p>
+            <p id="time-info">current time: <strong><span id="poland-time"></span></strong> (<span id="time-difference"></span>) <img class="emote" width="24" height="24" src="/assets/media/emojis/pepetime.gif" alt="" loading="lazy"></p>
             <script>
                 function updateTimeInfo() {
                     const polandOffset = 2; // poland is utc+2
@@ -73,27 +73,29 @@
                         // send api request
                         const response = await fetch('https://api.juljeryt.pl/counter.php');
                         const data = await response.json();
-        
+
                         // show the visitor count
                         if (data.error) {
                             console.error('error:', data.error);
                             document.getElementById('visitor-count').textContent = 'oops something went wrong';
                             return;
                         }
-                        document.getElementById('visitor-count').textContent = 'visitors count: ' + data.visitor_count;
+                        document.getElementById('visitor-count').innerHTML = 
+                            'visitors count: ' + data.visitor_count + 
+                            ' <img style="margin-bottom:10px;" class="emote" width="24" height="24" src="/assets/media/emojis/pepe-arrive.gif" alt="" loading="lazy">';
                     } catch (error) {
                         console.error('error fetching visitor count:', error);
                     }
                 }
-        
+
                 // update visit count on page load
                 window.onload = updateVisitCount;
             </script>
-            <p>im interested in programming, editing videos, modding phones, experimenting with the raspberry pi, exploring cities and spending time with friends. <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-hacking.gif" alt="" loading="lazy"></p>
-            <p>in my free time i often listen to music, message on discord or telegram and play various games <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-gaming.gif" alt="" loading="lazy"></p>
-            <p>i live in warsaw, poland <img class="emote" width="24" height="24" style="width: 24px;" src="/assets/media/pepe-poland.gif" alt="" loading="lazy"></p>
+            <p>i am interested in web dev, pentesting, networks, programming, cybersecurity and many more <img class="emote" width="24" height="24" src="/assets/media/emojis/pepe-hacking.gif" alt="" loading="lazy"></p>
+            <p>in my free time i often listen to music, text with friends, play games, explore cities or spend time with my friends <img class="emote" width="24" height="24" src="/assets/media/emojis/pepe-gaming.gif" alt="" loading="lazy"></p>
+            <p>i live in warsaw, poland <img class="emote" width="24" height="24" src="/assets/media/emojis/pepe-poland.gif" alt="" loading="lazy"></p>
             <p id="weather-info">
-                current weather: <strong><span id="temperature"></span></strong>
+                current weather: <strong><span id="temperature"></span></strong> <img class="emote" width="24" height="24" src="/assets/media/emojis/peperain.gif" alt="" loading="lazy">
             </p>
             <script>
                 async function fetchWeather() {
@@ -108,41 +110,75 @@
                             document.getElementById('temperature').textContent = 'unable to fetch weather data';
                         }
                     } catch (error) {
-                        console.error('Error fetching weather data:', error);
+                        console.error('error fetching weather data:', error);
                         document.getElementById('temperature').textContent = 'error fetching weather data';
                     }
                 }
             
                 fetchWeather();
             </script>
+            <p>languages i know: polish, english <img class="emote" width="24" height="24" src="/assets/media/emojis/pepespeaking.gif" alt="" loading="lazy"></p>
+            <p>i like programming in:
+                <img class="emote" width="32" height="32" src="/assets/media/emojis/html5.svg" alt="" loading="lazy">
+                <img class="emote" width="32" height="32" src="/assets/media/emojis/css3.svg" alt="" loading="lazy">
+                <img class="emote" width="32" height="32" src="/assets/media/emojis/javascript.svg" alt="" loading="lazy">
+                <img class="emote" width="36" height="36" src="/assets/media/emojis/php.svg" alt="" loading="lazy">
+                <img class="emote" width="32" height="32" src="/assets/media/emojis/python.svg" alt="" loading="lazy">
+            </p>
+            <details><summary>favs</summary>
+                <p>fav corp: samsung <img class="emote" width="24" height="24" src="/assets/media/emojis/samsung.png" alt="" loading="lazy"></p>
+                <p>fav drink: coca cola <img class="emote" width="24" height="24" src="/assets/media/emojis/cocacola.svg" alt="" loading="lazy"></p> 
+                <p>fav database: mariadb <img class="emote" width="24" height="24" src="/assets/media/emojis/mariadb.svg" alt="" loading="lazy"></p>
+                <p>fav http server: nginx <img class="emote" width="24" height="24" src="/assets/media/emojis/nginx.svg" alt="" loading="lazy"></p>
+                <p>fav browser: brave <img class="emote" width="24" height="24" src="/assets/media/emojis/brave.svg" alt="" loading="lazy"></p>
+                <p>fav ide: visual studio code  <img class="emote" width="24" height="24" src="/assets/media/emojis/vsc.svg" alt="" loading="lazy"></p>
+            </details>
+            <details>
+            <summary>os info</summary>
+                <p>os: arch linux x86_64 <img class="emote" width="24" height="24" src="/assets/media/i-use-arch-btw/cover.gif" alt="" loading="lazy"></p>
+                <p>kernel: linux 6.13.7-zen1-1-zen <img class="emote" width="24" height="24" src="/assets/media/emojis/spinning-linux.gif" alt="" loading="lazy"></p>
+                <p>shell: fish 4.0.1 <img class="emote" width="24" height="24" src="/assets/media/emojis/fish.png" alt="" loading="lazy"></p>
+                <p>desktop env: kde plasma 6.3.3 <img class="emote" width="24" height="24" src="/assets/media/emojis/kde.svg" alt="" loading="lazy"></p>
+                <p>window manager: kwin (wayland) <img class="emote" width="24" height="24" src="/assets/media/emojis/wayland.svg" alt="" loading="lazy"></p>
+            </details>
+            <details><summary>hardware</summary>
+            <p>phone: samsung galaxy s23 <img class="emote" width="24" height="24" src="/assets/media/emojis/samsung.png" alt="" loading="lazy"></p>
+            <p>cpu: amd ryzen 5 5600h (12) @ 4.28 ghz <img class="emote" width="24" height="24" src="/assets/media/emojis/ryzen.svg" alt="" loading="lazy"></p>
+            <p>gpu: nvidia geforce rtx 3060 <img class="emote" width="24" height="24" src="/assets/media/emojis/nvidia.svg" alt="" loading="lazy"></p>
+            <p>ram: 16 gb</p>
+            <p>disk 1: samsung 1tb m.2 pcie gen4 nvme 990 pro <img class="emote" width="24" height="24" src="/assets/media/emojis/samsung.png" alt="" loading="lazy"></p>
+            <p>disk 2: samsung 1tb 2,5" sata ssd 870 evo <img class="emote" width="24" height="24" src="/assets/media/emojis/samsung.png" alt="" loading="lazy"></p>
+            <p>monitor 1: gigabyte gs27q x <img class="emote" width="24" height="24" src="/assets/media/emojis/gigabyte.svg" alt="" loading="lazy"></p>
+            <p>monitor 2: gigabyte gs27q x <img class="emote" width="24" height="24" src="/assets/media/emojis/gigabyte.svg" alt="" loading="lazy"></p>
+            </details>
     </div>
     <div class="entry-content" id="contact">
-        <h2>contact <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepe-ping.gif" alt="" loading="lazy"></h2>
+        <h2>contact <img class="emote" width="32" height="32" src="/assets/media/emojis/pepe-ping.gif" alt="" loading="lazy"></h2>
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
-            <details class="allow-rightclick"><summary>donate me</summary>
+            <details class="allow-rightclick"><summary>donate me <img style="margin-bottom:10px;" class="emote" width="24" height="24" src="/assets/media/emojis/pepemoney.gif" alt="" loading="lazy"></summary>
                 <script>
                     var clipboard = new ClipboardJS('.copy');
                 </script>
                 <p>
                     <span>you can click on the address to automatically copy it</span>
                     <br>
-                    <strong>btc address:</strong>
+                    <strong>btc address: <img class="emote" width="24" height="24" src="/assets/media/emojis/btc.svg" alt="" loading="lazy"></strong>
                     <br>
                     <code id="btc" data-clipboard-target="#btc" class="copy">bc1qjf5ae848arnm2ylu94wshjqnz3377cuq2ctvxe</code>
                     <br>
-                    <strong>eth address:</strong>
+                    <strong>eth address: <img class="emote" width="24" height="24" src="/assets/media/emojis/eth.svg" alt="" loading="lazy"></strong>
                     <br>
                     <code id="eth" data-clipboard-target="#eth" class="copy">0xdD8F31BAe74448CA4732b9BBA2E2414250c50df5</code>
                     <br>
-                    <strong>doge address:</strong>
+                    <strong>doge address: <img class="emote" width="24" height="24" src="/assets/media/emojis/doge.svg" alt="" loading="lazy"></strong>
                     <br>
                     <code id="doge" data-clipboard-target="#doge" class="copy">DT9HuppZkhmfgNHcDW8RJz9UygUJnWUNkY</code>
                     <br>
-                    <strong>ltc address:</strong>
+                    <strong>ltc address: <img class="emote" width="24" height="24" src="/assets/media/emojis/ltc.svg" alt="" loading="lazy"></strong>
                     <br>
                     <code id="ltc" data-clipboard-target="#ltc" class="copy">LN4xr3Ls8412QAhdwkWhpESHiSeWkui5Nc</code>
                     <br>
-                    <strong>xrp address:</strong>
+                    <strong>xrp address: <img class="emote" width="24" height="24" src="/assets/media/emojis/xrp.svg" alt="" loading="lazy"></strong>
                     <br>
                     <code id="xrp" data-clipboard-target="#xrp" class="copy">rPSZp8eM4s8vriPHJWyjjknqQEX1V1mZa8</code>
                 </p>
@@ -195,7 +231,7 @@
                     });
                 </script>
             </form>
-            <h2 id="blog">blog <img class="emote" width="32" height="32" style="width: 32px;" src="/assets/media/pepo-writing.gif" alt="" loading="lazy"></h2>
+            <h2 id="blog">blog <img class="emote" width="32" height="32" src="/assets/media/emojis/pepe-writing.gif" alt="" loading="lazy"></h2>
     </div>
 </article>
 {{- end -}}
