@@ -24,6 +24,9 @@ header {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideup 0.69s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 .header-2 {
@@ -35,6 +38,9 @@ header {
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 0.35rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  animation: slideup 0.69s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
 }
 
 .julswebsite {
@@ -71,6 +77,13 @@ section {
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  animation: cardentrance 0.6s ease-in-out forwards;
+  transition: border-color 0.69s ease;
+}
+
+.card:hover {
+  border-color: rgba(148, 163, 184, 0.5);
 }
 
 .card1-1 {
@@ -78,6 +91,23 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation-delay: 0.2s;
+}
+
+.card1-2 {
+  animation-delay: 0.4s;
+}
+
+.card1-3 {
+  animation-delay: 0.6s;
+}
+
+.card2-1 {
+  animation-delay: 0.8s;
+}
+
+.card2-2 {
+  animation-delay: 1s;
 }
 
 .pfp {
@@ -151,12 +181,18 @@ section {
   to { opacity: 1; }
 }
 
+@keyframes longerfadein {
+  1% { opacity: 0; }
+  69% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes slideup {
-  from { 
+  from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -165,7 +201,7 @@ section {
 @keyframes cardentrance {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.95);
+    transform: translateY(10px) scale(0.98);
   }
   to {
     opacity: 1;
@@ -180,6 +216,8 @@ footer {
   font-size: 0.9rem;
   line-height: 1.2rem;
   text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  opacity: 0;
+  animation: longerfadein 2s ease-in-out forwards;
 }
 
 .title1 {
