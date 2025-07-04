@@ -211,14 +211,15 @@ footer {
   margin-top: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  gap: 1rem;
   justify-items: start;
   align-items: center;
   justify-content: center;
 }
 
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
