@@ -1,4 +1,9 @@
 <?php
+// this is api i use for managing forms
+// it has builtin captcha, db logging, discord webhook, ip and useragent detection
+// feel free to use it and contribute to it
+// if you found any bug or vulnerability, please report it to me: kontakt@juljeryt.pl
+
 header('Content-Type: application/json');
 
 // config and other shi
