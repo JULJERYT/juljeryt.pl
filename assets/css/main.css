@@ -208,6 +208,34 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  justify-items: start;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f4f6;
+  text-decoration: none;
+}
+
+.icon object, .icon img, .icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 @media (min-width: 768px) {
     body {
         padding: 2rem;
@@ -228,6 +256,8 @@ footer {
       grid-column: span 2;
     }
     .card2-2 {
-      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 }
