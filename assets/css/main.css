@@ -162,6 +162,9 @@ section {
 .quote-icon {
     margin-right: 1rem;
     font-size: 1.5rem;
+    animation: uptodown 1s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
 
 .quote-title {
@@ -169,12 +172,33 @@ section {
     font-weight: bold;
     margin-bottom: 0.5rem;
     margin-top: 0;
+    animation: uptodown 1s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
 
 .quote-line {
+    opacity: 0;
     margin-top: 0.5rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    animation: lefttoright 1s ease-out forwards;
+}
+
+.quote-line:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.quote-line:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.quote-line:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.quote-line:nth-child(4) {
+    animation-delay: 1.6s;
 }
 
 .quote-list {
@@ -222,6 +246,39 @@ section {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes lefttoright {
+    from {
+        opacity: 0;
+        transform: translateX(-32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes uptodown {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtoup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -279,8 +336,36 @@ footer {
     align-items: center;
     justify-content: center;
     color: #f3f4f6;
+    fill: #f3f4f6;
     text-decoration: none;
     transition: filter 1s ease;
+    animation: downtoup 1s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.icon:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.icon:nth-child(2) {
+    animation-delay: 1.15s;
+}
+
+.icon:nth-child(3) {
+    animation-delay: 1.3s;
+}
+
+.icon:nth-child(4) {
+    animation-delay: 1.45s;
+}
+
+.icon:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.icon:nth-child(6) {
+    animation-delay: 1.75s;
 }
 
 .icon:hover {
@@ -330,3 +415,16 @@ footer {
         gap: 1rem;
     }
 }
+
+@media (max-width: 420px) {
+    .quote-icon {
+        display: none;
+    }
+
+    .socials {
+        grid-template-columns: repeat(3, min-content);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
