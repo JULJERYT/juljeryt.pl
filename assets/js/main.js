@@ -32,8 +32,6 @@ async function updateStatus() {
     }
 }
 
-updateStatus();
-
 // animated title
 function animateTitle() {
     var index = 0;
@@ -46,4 +44,50 @@ function animateTitle() {
     }, 300);
 }
 
-window.onload = animateTitle;
+// fallback
+let userClockFormat = false;
+
+// detect users clock format (12h or 24h)
+function detectClockFormat() {
+    const date = new Date();
+    const formatted = new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "numeric"
+    }).format(date);
+    userClockFormat = /AM|PM/i.test(formatted);
+}
+
+// update time
+function updateTime() {
+    document.getElementById('time').textContent = new Date().toLocaleTimeString('pl-PL', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: userClockFormat,
+        timeZone: 'Europe/Warsaw'
+    });
+}
+
+// update weather from internal api (api.juljeryt.pl)
+// its source code isnt public for now
+async function updateWeather() {
+    try {
+        const response = await fetch('https://api.juljeryt.pl/weather');
+        const data = await response.json();
+        if (typeof data.temperature_celsius !== 'number' || typeof data.temperature_fahrenheit !== 'number') return;
+        const weatherText = `${data.temperature_celsius}°C · ${data.temperature_fahrenheit}°F`;
+        document.getElementById('weather2').textContent = weatherText;
+        document.getElementById('weather1').removeAttribute('hidden');
+    } catch (error) {
+        console.error('failed to fetch weather:', error);
+    }
+}
+
+// wait for DOM
+window.addEventListener('DOMContentLoaded', () => {
+    detectClockFormat();
+    animateTitle();
+    updateStatus();
+    updateTime();
+    updateWeather();
+    setInterval(updateTime, 60000);
+});
