@@ -7,6 +7,7 @@ i also want this site to:
 - be **responsive**
 - **not** make requests to **external cdn's and servers** and when it is necessary display a warning
 - have a **transparent cards theme**
+- be super secure (i host it on aws and use cloudflare bot management along with aws waf captcha for security)
 
 for the current moment ive decided to remove my blog, maybe i will bring it back in the future
 
