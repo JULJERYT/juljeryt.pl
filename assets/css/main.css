@@ -97,12 +97,25 @@ section {
 .card1-2 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     animation-delay: 0.4s;
+    gap: 0.5rem;
+    padding-top: 0;
+}
+
+.card1-2 span {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
 }
 
 .card1-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding-top: 0;
     animation-delay: 0.6s;
 }
 
@@ -112,6 +125,10 @@ section {
 
 .card2-2 {
     animation-delay: 1s;
+}
+
+.card2-2 .title1 {
+    margin-bottom: 0;
 }
 
 .card0-1 {
