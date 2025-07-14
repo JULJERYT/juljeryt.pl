@@ -202,6 +202,15 @@ section {
     margin-left: -2rem;
 }
 
+footer a {
+    color: rgb(191 219 254);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: rgb(147 197 253);
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
