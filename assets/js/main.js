@@ -10,16 +10,16 @@ async function updateStatus() {
         let statusText;
         switch (data.status) {
             case 'online':
-                statusText = 'online 🟢';
+                statusText = 'Online 🟢';
                 break;
             case 'dnd':
-                statusText = 'do not disturb ⛔';
+                statusText = 'Do Not Disturb ⛔';
                 break;
             case 'idle':
-                statusText = 'idle 🌙';
+                statusText = 'Idle 🌙';
                 break;
             case 'offline':
-                statusText = 'offline 🔴';
+                statusText = 'Offline 🔴';
                 break;
             default:
                 return;
