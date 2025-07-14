@@ -95,6 +95,10 @@ section {
 }
 
 .card1-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     animation-delay: 0.4s;
 }
 
@@ -131,12 +135,11 @@ section {
     margin-bottom: 1rem;
 }
 
-.about-title {
+.jul-title {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin-bottom: -0.8rem;
 }
 
 .verify {
@@ -145,13 +148,6 @@ section {
     filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.5));
     margin-left: 5px;
     margin-top: 10px;
-}
-
-.status {
-    width: 50%;
-    height: auto;
-    margin-top: 1rem;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 .favquote {
