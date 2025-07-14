@@ -1,3 +1,5 @@
+// update status from internal api (api.juljeryt.pl)
+// its source code isnt public for now
 async function updateStatus() {
     try {
         const response = await fetch('https://api.juljeryt.pl/status');
