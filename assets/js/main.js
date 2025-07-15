@@ -90,4 +90,5 @@ window.addEventListener('DOMContentLoaded', () => {
     updateTime();
     updateWeather();
     setInterval(updateTime, 60000);
+    document.getElementById('warning').classList.add("hidden");
 });
