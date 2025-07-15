@@ -25,10 +25,24 @@ async function updateStatus() {
                 return;
         }
 
-        document.getElementById('status').textContent = statusText;
-        document.getElementById('status').removeAttribute('hidden');
+        document.getElementById('status1').textContent = statusText;
+        document.getElementById("status1").classList.remove("hidden");
+        document.getElementById('status2').textContent = statusText;
+        document.getElementById("status2").classList.remove("hidden");
     } catch (error) {
         console.error('failed to fetch status:', error);
+    }
+}
+
+async function updateVisitors() {
+    try {
+        const response = await fetch('https://api.juljeryt.pl/counter');
+        const data = await response.json();
+        if (typeof data.visitors !== 'number') return;
+        document.getElementById('visitors2').textContent = data.visitors;
+        document.getElementById('visitors1').classList.remove('hidden');
+    } catch (error) {
+        console.error('failed to fetch visitors:', error);
     }
 }
 
@@ -74,9 +88,8 @@ async function updateWeather() {
         const response = await fetch('https://api.juljeryt.pl/weather');
         const data = await response.json();
         if (typeof data.temperature_celsius !== 'number' || typeof data.temperature_fahrenheit !== 'number') return;
-        const weatherText = `${data.temperature_celsius}°C · ${data.temperature_fahrenheit}°F`;
-        document.getElementById('weather2').textContent = weatherText;
-        document.getElementById('weather1').removeAttribute('hidden');
+        document.getElementById('weather2').textContent = `${data.temperature_celsius}°C · ${data.temperature_fahrenheit}°F`;
+        document.getElementById("weather1").classList.remove("hidden");
     } catch (error) {
         console.error('failed to fetch weather:', error);
     }
@@ -89,6 +102,9 @@ window.addEventListener('DOMContentLoaded', () => {
     updateStatus();
     updateTime();
     updateWeather();
+    updateVisitors();
     setInterval(updateTime, 60000);
+    document.getElementById("dynamic-header").classList.remove("hidden");
+    document.getElementById('static-header').classList.add("hidden");
     document.getElementById('warning').classList.add("hidden");
 });

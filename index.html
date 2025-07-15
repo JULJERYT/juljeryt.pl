@@ -36,9 +36,14 @@
         <span class="version">v1.0</span>
     </div>
     <div class="header-2">
-        <span>Placeholder</span>
+        <div class="hidden" id="dynamic-header">
+        <strong class="hidden" id="status1"></strong>
         <span>•</span>
-        <span>Visitors: <strong>Loading</strong></span>
+        <span class="hidden" id="visitors1">Visitors: <strong id="visitors2">Loading</strong></span>
+        </div>
+        <div id="static-header">
+        <strong>Have a nice day! 👋</strong>
+        </div>
     </div>
 </header>
 <main>
@@ -60,7 +65,7 @@
                     <path fill="#1d9bf0" d="M20.396 11a3.49 3.49 0 0 0-2.008-3.062c.223-.607.27-1.264.14-1.897a3.47 3.47 0 0 0-.882-1.687c-.47-.445-1.053-.75-1.687-.882s-1.29-.083-1.897.14a3.47 3.47 0 0 0-1.245-1.44A3.5 3.5 0 0 0 11 1.604a3.46 3.46 0 0 0-3.053 2.008 3.47 3.47 0 0 0-1.902-.14c-.635.13-1.22.436-1.69.882a3.46 3.46 0 0 0-.734 3.584A3.5 3.5 0 0 0 1.604 11a3.5 3.5 0 0 0 .574 1.817c.356.54.856.972 1.443 1.245a3.46 3.46 0 0 0-.144 1.896 3.47 3.47 0 0 0 .877 1.688 3.5 3.5 0 0 0 3.584.742A3.49 3.49 0 0 0 11 20.396a3.48 3.48 0 0 0 3.062-2.007 3.335 3.335 0 0 0 4.326-4.327A3.49 3.49 0 0 0 20.396 11M9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
                 </svg>
             </div>
-            <strong hidden id="status"></strong>
+            <strong class="hidden" id="status2"></strong>
         </article>
         <article class="card card1-2" id="second-card">
             <!-- about -->
@@ -69,7 +74,7 @@
             <span>⚧️ Pronouns: <strong>he/him</strong></span>
             <span>🕓 My time: <strong id="time">UTC+2</strong></span>
             <span>📍 Location: <strong>Warsaw, Poland</strong></span>
-            <span id="weather1" hidden>🌡️ Weather: <strong id="weather2">Loading</strong></span>
+            <span id="weather1" class="hidden">🌡️ Weather: <strong id="weather2">Loading</strong></span>
         </article>
         <article class="card card1-3" id="third-card">
             <!-- interests -->
