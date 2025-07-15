@@ -12,6 +12,10 @@ body {
     margin-left: auto;
 }
 
+.hidden {
+    display: none !important;
+}
+
 header {
     display: flex;
     align-items: center;
